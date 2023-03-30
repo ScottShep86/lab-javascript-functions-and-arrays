@@ -181,22 +181,21 @@ const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating
 function doesWordExist(wordsFind, wordToSearch) {
   if (wordsFind.length === 0) {
     return null
-  }
+  } else if (wordsFind.includes(wordToSearch)) {
+    return true;
+    } else {
+      return false;
+    }
+}
 
-  /*for (let i = 0; i < wordsFind.length; i += 1) {
+  /*Here was one attempt as I thought i could solve it with a loop:
+  for (let i = 0; i < wordsFind.length; i += 1) {
     if (wordsFind[i].includes("")) {
       return true;
     } else {
       return false;
     }
   }*/
-
-  if (wordsFind.includes(wordToSearch)) {
-    return true;
-    } else {
-      return false;
-    }
-}
 
 
 
